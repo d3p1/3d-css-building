@@ -1,0 +1,16 @@
+/**
+ * @description Building roof styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__building-roof {
+  --building-roof-width: var(--building-width);
+  --building-roof-height: var(--building-width);
+  --building-roof-color: hsl(214, 41%, 78%);
+}
+
+.scene__building-roof {
+  width: var(--building-roof-width);
+  height: var(--building-roof-height);
+  background-color: var(--building-roof-color);
+  transform: rotateX(90deg) translateZ(calc(var(--building-roof-height) / 2));
+}

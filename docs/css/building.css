@@ -1,0 +1,9 @@
+/**
+ * @description Building styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+@import url('building/base.css');
+@import url('building/wall.css');
+@import url('building/roof.css');
+@import url('building/window.css');
+@import url('building/door.css');

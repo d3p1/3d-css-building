@@ -1,0 +1,17 @@
+/**
+ * @description Building base styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__building {
+  --building-width: 10em;
+  --building-height: 20em;
+}
+
+.scene__building {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(45deg);
+  width: var(--building-width);
+  height: var(--building-height);
+}

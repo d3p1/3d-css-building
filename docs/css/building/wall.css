@@ -1,0 +1,93 @@
+/**
+ * @description Building wall styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__building-wall {
+  --building-wall-color: hsl(214, 41%, 78%);
+  --building-wall-brick-width: calc(var(--building-width) / 5);
+  --building-wall-brick-height: calc(var(--building-height) / 20);
+  --building-wall-brick-concrete-width: calc(
+    var(--building-wall-brick-width) / 20
+  );
+  --building-wall-brick-concrete-height: calc(
+    var(--building-wall-brick-height) / 20
+  );
+  --building-wall-brick-concrete-color: hsl(0, 0%, 50%);
+}
+
+.scene__building-wall {
+  position: absolute;
+  inset: 0;
+  padding: 1em;
+  display: grid;
+  grid-template: repeat(5, calc(var(--building-height) / 10)) / repeat(
+      2,
+      calc(var(--building-width) / 3)
+    );
+  gap: 1em;
+  align-content: start;
+  justify-content: center;
+  background-color: var(--building-wall-color);
+  background-image: linear-gradient(
+      180deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-height) / 2),
+      transparent calc(var(--building-wall-brick-concrete-height) / 2)
+    ),
+    linear-gradient(
+      90deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-width) / 2),
+      transparent calc(var(--building-wall-brick-concrete-width) / 2)
+    ),
+    linear-gradient(
+      0deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-height) / 2),
+      transparent calc(var(--building-wall-brick-concrete-height) / 2)
+    ),
+    linear-gradient(
+      270deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-width) / 2),
+      transparent calc(var(--building-wall-brick-concrete-width) / 2)
+    );
+  background-size: var(--building-wall-brick-width)
+    var(--building-wall-brick-height);
+}
+
+.scene__building-wall--left {
+  --building-wall-color: hsl(214, 71%, 98%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 90%);
+}
+
+.scene__building-wall--left {
+  transform: rotateY(270deg) translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--front {
+  --building-wall-color: hsl(214, 41%, 88%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 80%);
+}
+
+.scene__building-wall--front {
+  transform: translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--back {
+  --building-wall-color: hsl(214, 41%, 78%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 60%);
+}
+
+.scene__building-wall--back {
+  transform: rotateY(180deg) translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--right {
+  --building-wall-color: hsl(214, 41%, 68%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 50%);
+}
+
+.scene__building-wall--right {
+  transform: rotateY(90deg) translateZ(calc(var(--building-width) / 2));
+}
