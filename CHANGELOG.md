@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/d3p1/3d-css-building/compare/v1.0.0...v1.1.0) (2024-08-24)
+
+
+### Features
+
+* add rotation effect to adjust styles easily [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([33f1299](https://github.com/d3p1/3d-css-building/commit/33f129992324f5341ab79be2a58b2d31d69ae02d))
+* improve window and door styles [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([9575be1](https://github.com/d3p1/3d-css-building/commit/9575be1f771914a08fc008ee4675db20d13a4efd))
+* init building [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([e0abe6b](https://github.com/d3p1/3d-css-building/commit/e0abe6b76ec7b6dcaee52c4c5cd6d0d6a19a61ed))
+
 # 1.0.0 (2024-08-24)
 
 
