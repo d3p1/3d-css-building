@@ -1,3 +1,10 @@
+# 1.0.0 (2024-08-24)
+
+
+### Features
+
+* init [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([a636058](https://github.com/d3p1/3d-css-building/commit/a6360580a4772b76dc15b8719befda4ca245e72e))
+
 # [1.3.0](https://github.com/d3p1/base-css-template/compare/v1.2.0...v1.3.0) (2024-08-21)
 
 
