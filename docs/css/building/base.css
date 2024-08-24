@@ -11,7 +11,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotateY(45deg);
   width: var(--building-width);
   height: var(--building-height);
+  animation: buildingRotation 10s infinite linear;
+}
+
+.scene__building:hover {
+  animation-play-state: paused;
+}
+
+@keyframes buildingRotation {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(360deg);
+  }
 }
