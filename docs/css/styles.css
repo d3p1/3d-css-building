@@ -2,3 +2,206 @@
  * @description Styles
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
+:root {
+  --primary-color: hsl(0, 0%, 20%);
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  overflow: hidden;
+}
+
+.scene {
+  --perspective: 600px;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  perspective: var(--perspective);
+  transform-style: preserve-3d;
+  font-size: 28px;
+}
+
+.scene__building {
+  --building-width: 10em;
+  --building-height: 20em;
+}
+
+.scene__building {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(45deg);
+  width: var(--building-width);
+  height: var(--building-height);
+  transform-style: preserve-3d;
+}
+
+.scene__building-wall {
+  --building-wall-color: hsl(214, 41%, 78%);
+  --building-wall-brick-width: calc(var(--building-width) / 5);
+  --building-wall-brick-height: calc(var(--building-height) / 20);
+  --building-wall-brick-concrete-width: calc(
+    var(--building-wall-brick-width) / 20
+  );
+  --building-wall-brick-concrete-height: calc(
+    var(--building-wall-brick-height) / 20
+  );
+  --building-wall-brick-concrete-color: hsl(0, 0%, 50%);
+}
+
+.scene__building-wall {
+  position: absolute;
+  inset: 0;
+  padding: 1em;
+  display: grid;
+  grid-template: repeat(5, calc(var(--building-height) / 10)) / repeat(
+      2,
+      calc(var(--building-width) / 3)
+    );
+  gap: 1em;
+  align-content: start;
+  justify-content: center;
+  background-color: var(--building-wall-color);
+  background-image: linear-gradient(
+      180deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-height) / 2),
+      transparent calc(var(--building-wall-brick-concrete-height) / 2)
+    ),
+    linear-gradient(
+      90deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-width) / 2),
+      transparent calc(var(--building-wall-brick-concrete-width) / 2)
+    ),
+    linear-gradient(
+      0deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-height) / 2),
+      transparent calc(var(--building-wall-brick-concrete-height) / 2)
+    ),
+    linear-gradient(
+      270deg,
+      var(--building-wall-brick-concrete-color)
+        calc(var(--building-wall-brick-concrete-width) / 2),
+      transparent calc(var(--building-wall-brick-concrete-width) / 2)
+    );
+  background-size: var(--building-wall-brick-width)
+    var(--building-wall-brick-height);
+}
+
+.scene__building-wall--left {
+  --building-wall-color: hsl(214, 71%, 98%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 90%);
+}
+
+.scene__building-wall--left {
+  transform: rotateY(270deg) translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--front {
+  --building-wall-color: hsl(214, 41%, 88%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 80%);
+}
+
+.scene__building-wall--front {
+  transform: translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--back {
+  --building-wall-color: hsl(214, 41%, 78%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 60%);
+}
+
+.scene__building-wall--back {
+  transform: rotateY(180deg) translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-wall--right {
+  --building-wall-color: hsl(214, 41%, 68%);
+  --building-wall-brick-concrete-color: hsl(0, 0%, 50%);
+}
+
+.scene__building-wall--right {
+  transform: rotateY(90deg) translateZ(calc(var(--building-width) / 2));
+}
+
+.scene__building-roof {
+  --building-roof-width: var(--building-width);
+  --building-roof-height: var(--building-width);
+  --building-roof-color: hsl(214, 41%, 78%);
+}
+
+.scene__building-roof {
+  width: var(--building-roof-width);
+  height: var(--building-roof-height);
+  background-color: var(--building-roof-color);
+  transform: rotateX(90deg) translateZ(calc(var(--building-roof-height) / 2));
+}
+
+.scene__building-window {
+  --building-window-color: hsl(195, 53%, 79%);
+  --building-window-shadow-color: hsl(195, 53%, 59%);
+}
+
+.scene__building-window {
+  background-color: var(--building-window-color);
+  box-shadow: inset 0 0 10px var(--building-window-shadow-color);
+  width: 100%;
+}
+
+.scene__building-window--left {
+  --building-window-color: hsl(195, 53%, 79%);
+  --building-window-light-color: hsl(0, 0%, 100%);
+  --building-window-shadow-color: hsl(195, 53%, 75%);
+}
+
+.scene__building-window--left {
+  background-image: radial-gradient(
+    circle at 30% 40%,
+    hsl(0, 0%, 100%),
+    var(--building-window-color)
+  );
+}
+
+.scene__building-window--back {
+  --building-window-color: hsl(195, 53%, 49%);
+  --building-window-shadow-color: hsl(195, 53%, 45%);
+}
+
+.scene__building-window--front {
+  --building-window-color: hsl(195, 53%, 69%);
+  --building-window-shadow-color: hsl(195, 53%, 65%);
+}
+
+.scene__building-window--back {
+  --building-window-color: hsl(195, 53%, 39%);
+  --building-window-shadow-color: hsl(195, 53%, 34%);
+}
+
+.scene__building-door {
+  --building-door-color: hsl(210, 13%, 50%);
+  --building-door-light-color: hsl(210, 13%, 70%);
+  --building-door-shadow-color: hsl(210, 13%, 30%);
+}
+
+.scene__building-door {
+  width: calc(var(--building-width) / 5);
+  height: calc(var(--building-height) / 6);
+  background-color: var(--building-door-color);
+  background-image: radial-gradient(
+    circle at 30% 40%,
+    var(--building-door-light-color),
+    var(--building-door-color)
+  );
+  box-shadow: inset 0 0 10px var(--building-door-shadow-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 25% 25% 0 0;
+}
