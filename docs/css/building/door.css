@@ -3,9 +3,9 @@
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
 .scene__building-door {
-  --building-door-color: hsl(210, 13%, 50%);
-  --building-door-light-color: hsl(210, 13%, 70%);
-  --building-door-shadow-color: hsl(210, 13%, 30%);
+  --building-door-color: hsl(1, 81%, 73%);
+  --building-door-light-color: hsl(1, 81%, 70%);
+  --building-door-shadow-color: hsl(1, 81%, 30%);
 }
 
 .scene__building-door {
@@ -22,5 +22,5 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
-  border-radius: 25% 25% 0 0;
+  border-radius: 10% 10% 0 0;
 }
