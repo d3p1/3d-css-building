@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/d3p1/3d-css-building/compare/v1.1.0...v1.2.0) (2024-08-28)
+
+
+### Features
+
+* adjust moon animation [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([45f82a3](https://github.com/d3p1/3d-css-building/commit/45f82a3f92ebd0d5199682264087c707d7ec1add))
+* create neon building to practice animation and gradients [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([d408194](https://github.com/d3p1/3d-css-building/commit/d408194137cfdff3ed23e5b4d8ea8e335f0714ab))
+
 # [1.1.0](https://github.com/d3p1/3d-css-building/compare/v1.0.0...v1.1.0) (2024-08-24)
 
 
