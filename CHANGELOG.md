@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/d3p1/3d-css-building/compare/v1.2.0...v1.3.0) (2024-08-28)
+
+
+### Features
+
+* improve moon styles [[#1](https://github.com/d3p1/3d-css-building/issues/1)] ([261122f](https://github.com/d3p1/3d-css-building/commit/261122fe12b57717c8ae519c2942d2d3c512ae0a))
+
 # [1.2.0](https://github.com/d3p1/3d-css-building/compare/v1.1.0...v1.2.0) (2024-08-28)
 
 
