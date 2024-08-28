@@ -1,0 +1,13 @@
+/**
+ * @description Theme base styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+:root {
+  --primary-color: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  overflow: hidden;
+}

@@ -5,6 +5,7 @@
 .scene__building {
   --building-width: 10em;
   --building-height: 20em;
+  --building-border: -0.3em;
 }
 
 .scene__building {
@@ -13,18 +14,5 @@
   left: 50%;
   width: var(--building-width);
   height: var(--building-height);
-  animation: buildingRotation 10s infinite linear;
-}
-
-.scene__building:hover {
-  animation-play-state: paused;
-}
-
-@keyframes buildingRotation {
-  from {
-    transform: translate(-50%, -50%) rotateY(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotateY(360deg);
-  }
+  transform: translate(-50%, -50%) rotateY(45deg);
 }

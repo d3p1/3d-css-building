@@ -1,0 +1,64 @@
+/**
+ * @description Building sign styles
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+ */
+.scene__building-sign {
+  position: absolute;
+  top: 10%;
+  left: 26%;
+  width: 10em;
+  height: 10em;
+}
+
+.scene__building-sign::before {
+  content: 'CSS Rocks!';
+  position: absolute;
+  font-size: 3em;
+  background-image: linear-gradient(
+    45deg,
+    hsl(297, 100%, 77%) 0%,
+    hsl(193, 100%, 58%) 52%,
+    hsl(146, 100%, 58%) 90%
+  );
+  background-clip: text;
+  background-size: 400%;
+  color: transparent;
+}
+
+.scene__building-sign:nth-of-type(1) {
+  transform: rotateZ(-45deg) translateZ(1px);
+  text-shadow: 0 0 3em hsl(0, 0%, 0%);
+}
+
+.scene__building-sign:nth-of-type(2) {
+  transform: rotateZ(-45deg) translateZ(2px);
+}
+
+.scene__building-sign:nth-of-type(3) {
+  transform: rotateZ(-45deg) translateZ(3px);
+}
+
+.scene__building-sign:nth-of-type(4) {
+  transform: rotateZ(-45deg) translateZ(4px);
+}
+
+.scene__building-sign:nth-of-type(5) {
+  transform: rotateZ(-45deg) translateZ(5px);
+}
+
+.scene__building-sign:nth-of-type(6) {
+  transform: rotateZ(-45deg) translateZ(6px);
+  text-shadow: 0 0 1em hsl(146, 100%, 58%);
+}
+.scene__building-sign:nth-of-type(6)::before {
+  animation: buildingSignNeon 10s infinite alternate;
+}
+
+@keyframes buildingSignNeon {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
