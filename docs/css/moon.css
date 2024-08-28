@@ -9,6 +9,7 @@
   width: 6em;
   height: 6em;
   background-color: hsl(202, 100%, 46%);
+  box-shadow: 0 0 15px 0 hsl(202, 100%, 46%);
   background-image: linear-gradient(
     160deg,
     hsl(202, 100%, 46%) 0%,
