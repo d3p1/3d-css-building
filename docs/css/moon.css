@@ -2,9 +2,7 @@
  * @description Moon styles
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
-.scene__moon,
-.scene__moon::before,
-.scene__moon::after {
+.scene__moon {
   position: absolute;
   top: 5%;
   left: 7%;
@@ -16,82 +14,45 @@
     hsl(202, 100%, 46%) 0%,
     hsl(173, 46%, 66%) 100%
   );
-  border-radius: 50%;
   animation:
-    moonDeformationBottomLeft 5s infinite alternate,
-    moonDeformationTopRight 8s infinite alternate;
-}
-
-.scene__moon::before {
-  width: 4em;
-  height: 4em;
-  animation:
-    moonDeformationBottomRight 7s infinite alternate,
-    moonDeformationTopLeft 9s infinite alternate,
-    moonItemHorizontalTranslation 5s infinite alternate;
-}
-
-.scene__moon::after {
-  width: 4em;
-  height: 4em;
-  animation:
-    moonDeformationBottomLeft 5s infinite alternate,
-    moonDeformationBottomRight 7s infinite alternate,
-    moonDeformationTopLeft 9s infinite alternate,
-    moonDeformationTopRight 10s infinite alternate,
-    moonItemVerticalTranslation 5s infinite alternate;
-}
-
-@keyframes moonItemHorizontalTranslation {
-  from {
-    transform: translateX(-4em);
-  }
-  to {
-    transform: translateX(4em);
-  }
+    moonDeformationBottomRight 5s infinite alternate,
+    moonDeformationTopLeft 2s infinite alternate,
+    moonDeformationBottomLeft 3s infinite alternate,
+    moonDeformationTopRight 6s infinite alternate;
 }
 
 @keyframes moonDeformationBottomLeft {
   from {
-    border-bottom-left-radius: 25%;
+    border-bottom-left-radius: 50%;
   }
   to {
-    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 40%;
   }
 }
 
 @keyframes moonDeformationBottomRight {
   from {
-    border-bottom-right-radius: 30%;
+    border-bottom-right-radius: 50%;
   }
   to {
-    border-bottom-right-radius: 50%;
+    border-bottom-right-radius: 45%;
   }
 }
 
 @keyframes moonDeformationTopLeft {
   from {
-    border-top-left-radius: 35%;
+    border-top-left-radius: 50%;
   }
   to {
-    border-top-left-radius: 50%;
+    border-top-left-radius: 42%;
   }
 }
 
 @keyframes moonDeformationTopRight {
   from {
-    border-top-right-radius: 40%;
-  }
-  to {
     border-top-right-radius: 50%;
   }
-}
-
-@keyframes moonItemVerticalTranslation {
-  from {
-    transform: translateY(-4em);
-  }
   to {
-    transform: translateY(4em);
+    border-top-right-radius: 46%;
   }
 }
